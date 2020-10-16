@@ -1,5 +1,5 @@
 {
-  "name": "react-native-photo-gallery",
+  "name": "@arlenwang/react-native-photo-gallery",
   "version": "0.2.4",
   "description": "A simple gallery component",
   "main": "index.js",
@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fidme/react-native-photo-gallery"
+    "url": "https://github.com/ArlenWang/react-native-photo-gallery"
   },
-  "author": "Michaël Villeneuve",
+  "author": "arlenwang",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react-native-photo-view": "1.5.2"
+    "react-native-photo-view": "^1.5.2"
   }
 }
