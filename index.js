@@ -2,13 +2,14 @@ import { ActivityIndicator, Dimensions, FlatList, View } from "react-native";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Pagination, Slide } from "./src";
-
+const {fullWidth,fullHeight} = Dimensions.get("window");
 export default class Gallery extends Component {
   constructor(props) {
     super(props);
     this.sendCurrentImageInfo(this.props.data[0]);
     this.state = {
-      index: 0
+      index: 0,
+      width:fullWidth,
     };
     if (this.props.initialIndex) {
       setTimeout(() => {
@@ -43,7 +44,7 @@ export default class Gallery extends Component {
     this.sendCurrentImageInfo(this.props.data[index]);
     this.setState({ index });
     this.swiper.scrollToOffset({
-      offset: Dimensions.get("window").width * index
+      offset:fullWidth * index
     });
   };
 
@@ -110,12 +111,12 @@ const styles = {
   },
   flatList: {
     flex: 1,
-    width: Dimensions.get("window").width,
+    width: fullWidth,
     alignSelf: "stretch"
   },
   loader: {
     position: "absolute",
-    top: Dimensions.get("window").height / 2 - 10,
-    left: Dimensions.get("window").width / 2 - 10
+    top: fullHeight / 2 - 10,
+    left: fullWidth / 2 - 10
   }
 };
