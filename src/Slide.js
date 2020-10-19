@@ -7,7 +7,7 @@ import {
   ScrollView,
   Dimensions
 } from "react-native";
-import PhotoView from "react-native-photo-view";
+import PhotoView from "@arlenwang/react-native-photo-view";
 import PropTypes from "prop-types";
 
 const Slide = ({ item }) => {
